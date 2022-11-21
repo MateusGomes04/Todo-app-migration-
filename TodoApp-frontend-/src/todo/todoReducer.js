@@ -16,9 +16,11 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'DESCRIPTION_CHANGED':
-            return {...state, description: action.playload}
+            return { ...state, description: action.playload }
+        case 'TODO_SEARCHED':
+            return { ...state, list: action.playload.data }
         default:
             return state
     }
