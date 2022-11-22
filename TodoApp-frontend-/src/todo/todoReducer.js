@@ -5,7 +5,7 @@ const todoReducer = (state = INITIAL_STATE, action) => {
         case 'DESCRIPTION_CHANGED':
             return { ...state, description: action.playload }
         case 'TODO_SEARCHED':
-            return { ...state, list: action.playload.data }
+            return { ...state, list: action.playload }
         case 'TODO_CLEAR':
             return { ...state, description: '' }
         default:
